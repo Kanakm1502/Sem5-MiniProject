@@ -1,0 +1,21 @@
+Steps I am Taking
+
+1. Find  website
+-- Run in terminal
+2. scrapy startproject location_data
+3. scrapy genspider locations traveltriangle.com
+4. scrapy crawl locations
+--open locations that just got created. Make sure it is in the spiders folder.
+5. Take a look at the code there
+6. Start finding tags and collecting data
+
+**Remove None values from image links created due to lack of src_data field in some tags, also lazy load feature uses both src and src_data and in js src is automatically replaced with src_data after loading.
+
+**There is trouble with collecting data for ways to reach because starting from 71. Agumbe the means of transport are no longer maintained in a list. Thus currently we have empty lists after that.
+--> solved by just collecting means enclosed in enable tags and not including descriotions.
+
+**The above discrepancy is causing problems in the rest of the code!!!
+
+**Trouble in places to visit after Agumbe coz its all mixed in one paragraph with how to reach descriptions!!!
+
+**Data starting from how to reach values in highly incorrrect and needs work...
